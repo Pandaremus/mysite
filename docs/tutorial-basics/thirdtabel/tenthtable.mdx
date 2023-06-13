@@ -1,0 +1,180 @@
+# 个性化设置
+:::danger 以下需要重启计算机
+1、**去掉桌面快捷方式上的小箭头**<br/>
+位置：HKEY_CLASSES_ROOT\LNKFILE项 ：Is Short cut<br/>
+操作：删除此项。<br/>
+
+2、**隐藏桌面上的所有图标**<br/>
+位置：HKEY_CURRENT_USER\Software\Windows\CurrentVersion\Policies\Explorer<br/>
+新建：No Desktop（双字节）。<br/>
+操作：值设为1。<br/>
+
+3、**修改桌面上“回收站”的名字及图标**<br/>
+位置：HKEY_LOCAL_MACHINE\SOFTWARE\Classes\CLSID\{645FF040-5081-101B-9F08-00AA002F954E}（这个大家也可以直接查找“回收站”）。<br/>
+修改：（默认）一项进行名字修改。然后展开此项，选择DefaultIcon，这时大家看到有3个子项，如果想改变图标时，只需将路径和文件名改了即可。<br/>
+
+4 、**去掉桌面上的网上邻居**<br/>
+位置：HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer<br/>
+新建：NoNetHood（双字节）值： 1<br/>
+
+5、**在桌面上显示系统版本号**<br/>
+位置：HKEY_CURRENT_USER\Control Panel\Desktop<br/>
+项：PaintDesktopVersion<br/>
+修改：将值改为1<br/>
+
+6、**改变窗口按钮字体的颜色**<br/>
+位置：HKEY_CURRENT_USER\Control Pannel\Colors<br/>
+键值：Button Text<br/>
+修改：可以像PS一样，比如改为红(255,0,0)<br/>
+
+7、**屏蔽桌面上的IE图标**<br/>
+位置：HKEY_CURRENT_USER\Software\Windows\CurrentVersion\Policies\Explorer<br/>
+新建值项：No InternetIcon<br/>
+修改：1<br/>
+
+8、**禁止更改桌面墙纸**<br/>
+位置：HKEY_CURRENT_USER\Software\Windows\CurrentVersion\Policies\Explorer<br/>
+新建项值：No Changing Wall Paper(双字节）<br/>
+修改：1<br/>
+
+9、**设置登录背景**<br/>
+位置：HKEY_USERS\DEFAULT\ControlPanel\Desktop<br/>
+键值：WallPaper<br/>
+修改：把背景图片一写就OK了（比如C:\aa.bmp）<br/>
+:::
+
+:::note 其余无需重启个性化操作
+10、**更改：我的电脑的提示信息**<br/>
+位置：HKEY_LOCAL_MACHINE\SOFTWARE\Classes\CLSID\{20D04FE0-3AEA-1069-A2D8-08002B30309D}<br/>
+键值：InfoTip<br/>
+修改：自行根据需要进行修改。<br/>
+
+11、**更改：回收站的提示信息**
+位置：
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\CLSID\{645FF040-5081-101B-9F08-00AA002F954E}<br/>
+键值：InfoTip<br/>
+修改：自行根据需要进行修改。<br/>
+
+12、**更改IE的提示信息**<br/>
+位置：HKEY_LOCAL_MACHINE\SOFTWARE\Classes\CLSID\{871C5380-42A0-1069-A2EA-08002B30309D}<br/>
+键值：InfoTip<br/>
+修改：自行根据需要进行修改。 <br/>
+
+13、**更改网上邻居的提示信息位置：**<br/>
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\CLSID\{208D2C60-3AEA-1069-A2D7-08002B30309D}<br/>
+键值：InfoTip<br/>
+修改：同上<br/>
+
+14、**更改我的文档的提示信息位置：**<br/>
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\CLSID\{450D8FBA-AD25-11D0-98A8-0800361B1103}<br/>
+键值：InfoTip<br/>
+修改：同上<br/>
+
+15、**更改任务计划提示信息位置：**<br/>
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\CLSID\{D6277990-4C6A-11CF-8D87-00AA0060F5BF}<br/>
+键值：InfoTip<br/>
+修改：同上<br/>
+
+16、**改变桌面图标顺序位置：**<br/>
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\CLSID\{450D8FBA-AD25-11D0-98A8-0800361B1103}<br/>
+键值：SortOrderIndex<br/>
+修改：48（我的文档在第一位）<br/>
+54（我的电脑在第一位）<br/>
+
+17、**禁止帮助提示信息(需重启）**<br/>
+位置：<br/>
+HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced<br/>
+键值：showinfotip<br/>
+修改：0<br/>
+
+18、**用真彩色显示图标(需重启）**<br/>
+位置：HKEY_CURRENT_USER\ControlPanel\Desktop\WindowMetrics<br/>
+键值：Shell Icon BPP<br/>
+修改：32<br/>
+
+19、**更改图标显示尺寸(需重启）**<br/>
+位置：HKEY_CURRENT_USER\Control Panel\Desktop\WindowMetrics<br/>
+键值：Shell Icon SIZE<br/>
+修改：在显示器分辨率为1024*768时可改为：48；<br/>
+在显示器分辨率为1600*1200时可改为：64。<br/>
+
+20、**自动清除“文档”菜单中的历史记录**（需重启）<br/>
+位置：HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer<br/>
+新建：CleanReccentDocsOn-Exit<br/>
+(REG-DWORD)值：1<br/>
+
+21、**禁止“文档”的历史记录（需重启）**<br/>
+位置：HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer<br/>
+新建：NoReccentDocsHistory<br/>
+(REG-DWORD)值：1<br/>
+
+22、**去掉开始菜单的“文档”项**（需重启）<br/>
+位置：HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer<br/>
+新建：NoReccentDocsMenu<br/>
+(REG-DWORD)值：1<br/>
+
+23、**去掉开始菜单的“查找”项**（需重启）<br/>
+位置：HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer<br/>
+新建：NoFind<br/>
+(REG-DWORD)值：1<br/>
+
+24、**去掉开始菜单的“运行”项**（需重启）<br/>
+位置：HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer<br/>
+新建：NoRun<br/>
+(REG-DWORD)值：1<br/>
+
+25、**禁止用户更改“开始”菜单**（需重启）<br/>
+位置：HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer<br/>
+新建：NoChangeStartMenu<br/>
+(REG-DWORD)值：1<br/>
+
+26、**禁止显示开始菜单中的windows update项**（需重启）<br/>
+位置：HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer<br/>
+新建：NoWindowsUpdate<br/>
+(REG-DWORD)值：1<br/>
+
+27、**屏蔽开始菜单中的“关闭计算机”项**（需重启）<br/>
+位置：HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer<br/>
+新建：No Close (REG-DWORD)值：1<br/>
+
+28、**加快“开始”菜单与“任务栏”的速度**<br/>
+位置：HKEY_CURRENT_USER\Control Panel\Desktop<br/>
+键值：Menu Show Delay<br/>
+值：数值资料改为100或更小（默认值为：400），建议不要使用0，因为如此一来只要鼠标一不小心触碰到“所有程序”，整条菜单就会跑出来。<br/>
+
+29、**为回收站的右键菜单增加“删除”和“重命名”**<br/>
+位置：
+HKEY_CLASSES_ROOT\CLSID\{645FF040-5081-101B-9F08-00AA002F954E}\ShellFolder<br/>
+键值：Attributes<br/>
+值：70 01 00 20<br/>
+
+30、**为右键菜单添加“在新窗口打开”命令**<br/>
+位置：HKEY_LOCAL_MACHINE\SOFTWARE\Classes\Directory\shell<br/>
+新建子项：New Window<br/>
+修改：将默认值、项值改为“在新窗口打开”<br/>
+继续：在New Window项下新建个子项command<br/>
+修改：将默认值、项值改为explorer.exe<br/>
+
+31、**为右键菜单添加“快速关闭计算机”命令**<br/>
+位置：HKEY_LOCAL_MACHINE\SOFTWARE\Classes\Directory\shell<br/>
+新建子项：快速关闭计算机<br/>
+修改：将默认值项值改为“快速关闭计算机”<br/>
+继续：在New Window项下新建个子项command<br/>
+修改：将默认值项值改为"c:\windows\rundll32.exe user.exe,exitwindowsexec"<br/>
+
+32、**禁止任务栏的快捷菜单**（需重启)<br/>
+位置：HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer<br/>
+新建键值：No Tray Context Menu<br/>
+(REG_DWORD)值：1<br/>
+
+33、**将任务栏显示时间的地方改为要显示的文字**（需重启）<br/>
+位置：HKEY_CURRENT_USER\Control Panel\International<br/>
+键值：STimeFormat<br/>
+修改：自己喜欢什么文字就改成什么吧<br/>
+
+34、**禁止使用任务栏（需重启）**<br/>
+位置：HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer<br/>
+新建键值：NoSetTaskBar<br/>
+(REG_DWORD)修改：1<br/>
+
+:::

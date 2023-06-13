@@ -1,0 +1,313 @@
+
+import BasicImageViewer from './../../src/components/zujian/index.js'
+
+
+# Excel 相关知识 #
+
+## 一、信任中心设置 ##
+
+:::note 简介
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;可以在信任中心中找到Microsoft Office程序的安全和隐私设置。信任中心中提供的选项允许你与所需的人共享文档，以及查找和删除你可能不想公开的隐藏信息。<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;更改信任中心设置时会极大地降低或提高计算机、其数据、组织网络上的数据以及该网络中其他计算机的安全性。 在更改信任中心设置前，谨慎地考虑各种风险。
+:::
+
+### 1、找到信任中心设置 ###
+:::note 设置
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;单击“文件”菜单，选择“选项”，弹出“Excel选项”对话框。在弹出的“Excel选项”对话框中，选择“信任中心”选项，单击“信任中心设置”按钮，弹出的“信任中心”对话框。
+<BasicImageViewer src="https://docusaurus-1315095412.cos.ap-beijing.myqcloud.com/image/Docs2FirstCategory/1.png" />
+<BasicImageViewer src="https://docusaurus-1315095412.cos.ap-beijing.myqcloud.com/image/Docs2FirstCategory/2.png" />
+:::
+
+### 2、受信任的发布者 ###
+:::note 介绍
+#### 2.1．什么是受信任的发布者？ ####
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;发布者通常是一名创建宏、ActiveX 控件、加载项等代码项目的软件开发人员。在将发布者视为可靠发布者之前，需要了解该发布者的身份以及此人的凭据是否有效。受信任的发布者具有良好的信誉且符合下面的所有条件：<br/>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;（1）代码项目由开发人员使用数字签名进行签名。<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;（2）该数字签名有效。<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;（3）该数字签名没有过期。<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;（4）与该数字签名关联的证书是由有声望的证书颁发机构 (CA) 颁发的。<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;（5）对代码项目进行签名的开发人员是受信任发布者。<br/>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;注：如果您尝试运行不符合以上全部条件的代码，则该代码会被禁用，并且会显示消息栏以通知您发布者可能不安全。如果您打开来自某个发布者的文件时收到警告消息，指出没有签名或签名无效，则不应启用内容或信任发布者，除非您确定代码项目的来源可靠。
+
+#### 2.2．在出现消息栏时启用来自发布者的活动内容 ####
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;当遇到来自发布者的文件中的新活动内容（例如签名的宏或加载项）时，会出现消息栏，其中带有盾牌图标、警告文本和“启用内容”按钮。如果知道发布者是可靠的，则可以单击“启用内容”，使活动内容能够运行。
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;（1）在消息栏中，单击“启用内容”。<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;（2）此时会打开该文件，并且它是受信任的文档。（该文件将成为受信任的文档，但发布者不受信任）。<br/>
+
+<BasicImageViewer src="https://docusaurus-1315095412.cos.ap-beijing.myqcloud.com/image/Docs2FirstCategory/3.png" />
+:::
+
+### 3、受信任位置 ###
+:::note 简介
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;受信任位置是一个文件夹，其中包含你信任的安全文件。如果不希望某文件接受信任中心检查，或者如果不希望在受保护的视图中打开它，则应使用受信任位置存储该文件。尤其是具有宏、数据连接或 ActiveX 控件的文件 (我们所说的活动内容) 。<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;如果认为文件中的活动内容来自可靠源，最佳做法是将文件移动到受信任的位置。<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**注:系统会认为存储在受信任位置的任何文件都是安全的，并且会绕过一些安全检查。 请确保信任放置在其中的任何文件的源。**
+
+#### 3.1．添加受信任位置 #### 
+（1）单击 “文件 > 选项” > “信任中心”>“信任中心设置”>“受信任位置”。
+<BasicImageViewer src="https://docusaurus-1315095412.cos.ap-beijing.myqcloud.com/image/Docs2FirstCategory/4.png" />
+<BasicImageViewer src="https://docusaurus-1315095412.cos.ap-beijing.myqcloud.com/image/Docs2FirstCategory/5.png" />
+（1）单击“添加新位置”。<br/>
+（2）单击“浏览”查找文件夹，选择一个文件夹，然后单击“确定”。<br/>
+<BasicImageViewer src="https://docusaurus-1315095412.cos.ap-beijing.myqcloud.com/image/Docs2FirstCategory/6.png" />
+
+#### 3.2．删除受信任位置 ####
+（1）单击 “文件 > 选项” > “信任中心”>“信任中心设置”>“受信任位置”。<br/>
+（2）选择要删除的位置，然后单击“删除”，再单击“确定”。
+<BasicImageViewer src="https://docusaurus-1315095412.cos.ap-beijing.myqcloud.com/image/Docs2FirstCategory/7.png" />
+
+#### 3.3．更改受信任位置 ####
+（1）单击 “文件 > 选项” > “信任中心”>“信任中心设置”>“受信任位置”。<br/>
+（2）在“受信任位置”列表中，选择一个位置，然后单击“修改”。<br/>
+（3）按照需要进行修改，然后单击“确定”。<br/>
+<BasicImageViewer src="https://docusaurus-1315095412.cos.ap-beijing.myqcloud.com/image/Docs2FirstCategory/8.png" />
+:::
+
+### 4、受信任的文档 ###
+::::note 简介
+ #### 4.1．什么是受信任的文档 ####
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;受信任的文档是通过启用其中的活动内容标记为受信任的文件。<br/>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;将文件标记为受信任后，将打开活动内容（宏、ActiveX 控件、数据连接等），而不会显示消息栏警告。如果文档受信任，则在打开文件时不会出现任何提示，即使添加了新的活动内容或者对现有活动内容进行了更改也是如此。不过，如果在上次信任文件后移动了该文件，则会出现提示。。<br/>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;在信任某个文档后，该文档在受保护的视图中不会再打开。因此，只有在信任文件来源的情况下，才应信任文档。。<br/>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**注意:如果某个文件在受保护的视图中打开，但不包含任何活动内容，然后您启用编辑功能，则该文件将成为受信任的文档，并且在受保护的视图中不再会打开。不过，如果该文件包含活动内容，则除非您启用该内容，否则会针对已禁用的活动内容显示消息栏。 在退出受保护的视图时，活动内容将自动不再启用。**
+
+ #### 4.2．了解“受信任的文档”设置 ####
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;（1）**允许可信文档联网**：对于网络位置中的文件，不再出现“安全警告”对话框。<br/>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;（2）**禁用受信任的文档**：每次打开这些文件时，将会出现“安全警告”对话框。<br/>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;（3）**清除所有受信任的文档**，**这样它们将不再可信**：单击“**清除**”可删除以前受信任文档的列表。<br/>
+<BasicImageViewer src="https://docusaurus-1315095412.cos.ap-beijing.myqcloud.com/image/Docs2FirstCategory/9.png" />
+
+ #### 4.3．创建受信任的文档 ####
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;打开具有活动内容（数据连接、宏等）的新文件时，将出现消息栏，因为活动内容可能包含病毒和其他可能损害计算机或组织网络的安全危险。
+<BasicImageViewer src="https://docusaurus-1315095412.cos.ap-beijing.myqcloud.com/image/Docs2FirstCategory/27.png" />
+
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;但是，如果你信任文件的源，或者知道活动内容是安全的（例如由受信任的发布者签名的宏），则可以通过选择“**启用内容**”按钮来启用文件的活动内容。 此操作会使其成为受信任的文档。 重新打开文件时，消息栏将不会出现。<br/>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**警告**: 如果不确定该宏的作用，请勿启用文档中的内容。 攻击者通常使用恶意的宏来分发恶意软件。
+
+ #### 4.4．某些文件无法成为受信任的文档 ####
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;有些情况下，无法将文件设为受信任文档。 例如，在尝试打开文件时已禁用一种或多种类型的活动内容。 在以下情况下会禁用活动内容：<br/>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;（1）系统管理员已设置安全策略，为你所在组织禁用了某种类型的活动内容（例如，**“禁用所有宏而不通知”**）。 在这种情况下，如果打开包含宏和数据连接的文件，则无法信任该文件，因为在该文件打开时禁用了宏。<br/>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;（2）你更改了适用于一种或多种活动内容类型的信任中心设置。
+ 要查看安全设置，请单击“**文件**”选项卡。 单击“**选项**”。 单击“**信任中心**”，然后单击“**信任中心设置**”。 您还可以在查看信任中心中的选项和设置中了解详细信息。
+
+:::note 4.4.1．文件无法成为受信任文档的更多原因 
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;（1）该文件是从不安全的位置打开的，例如临时 Internet 文件夹 (TIF) 或临时文件夹<br/>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;（2）系统管理员针对网络位置或所有位置禁用了该功能<br/>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;（3）您尝试信任的文件是一个模板，例如扩展名为 .dot、.dotx 或 .dotm 的文件<br/>
+  对于上面这些文件，请单击“**启用所有内容**”，在该会话中启用活动内容。 这样可以仅启用一次该内容。当您重新打开文件时仍会出现消息栏。<br/>
+  下面的示例是无法信任文件时“**安全警告**”区域的图像。
+  <<BasicImageViewer src="https://docusaurus-1315095412.cos.ap-beijing.myqcloud.com/image/Docs2FirstCategory/10.png" />
+:::
+
+ #### 4.5. 信任网络上的文档 ####
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;在信任网络上的文档之前，请务必小心，因为其他人可能会篡改网络文件并更改其中的活动内容。要降低安全风险的可能性，应仅信任由系统管理员控制或创建的网络位置上的文件。<br/>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;当您尝试信任某个网络位置中的文件时，会出现“**安全警告**”对话框。 可以单击对话框中的“**不再显示此消息**”，使该对话框不再出现。此外，可以单击“**安全警告**”对话框中的“**否**”来禁用该功能。<br/>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;可以在“**信任中心**”关闭网络位置的“**受信任的文档**”功能。<br/>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;（1）单击“**文件**”选项卡，单击“**选项**”，选择“**信任中心**”，然后选择“**信任中心设置**”。<br/>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;（2）单击“**受信任的文档**”，清除“**允许信任网络上的文档**”复选框。<br/>
+   <<BasicImageViewer src="https://docusaurus-1315095412.cos.ap-beijing.myqcloud.com/image/Docs2FirstCategory/11.png" />
+
+::::
+
+### 5、受信任的加载项目录 ###
+::::note  **5.1．不允许任何Web加载项启动**
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;在录入和处理数据的过程中，我们会遇到很多问题。此时，需要根据实际情况来处理，如何设置不允许任何Web加载项启动。<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;（1）单击“**文件**”选项卡，单击“**选项**”，选择“**信任中心**”，然后选择“**信任中心设置**”。<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;（2）单击“**受信任的加载项目录**”，勾选“**不允许任何Web加载项启动**”复选框。<br/>
+  <<BasicImageViewer src="https://docusaurus-1315095412.cos.ap-beijing.myqcloud.com/image/Docs2FirstCategory/12.png" />
+::::
+
+### 6、加载项 ###
+:::note 加载项设置
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;“加载项”中默认情况下不选择这些设置，除非您在组织中工作并且您的信息技术 (IT) 管理员使用管理员策略更改了这些默认设置。<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;（1）“**要求受信任的发布者签署应用程序加载项**”： 如果您希望信任中心检查包含加载项的动态链接库 (.dll) （动态链接库：在运行期间能从 Visual Basic 过程中调用、加载和链接到用户应用程序的子程序集。） 文件上的数字签名 （数字签名：宏或文档上电子的、基于加密的安全验证戳。此签名确认该宏或文档来自签发者且没有被篡改。），请选择该选项。如果发布者还不是受信任的 （信任：表示您是否信任证书颁发的受体（个人或组）。默认设置是“**继承颁发者的信任关系**”，也就是因为对颁发者（通常是证书颁发机构）的信任而信任证书。），Office 程序不会加载该加载项，并且会出现消息栏，显示一条说明加载项已被禁用的通知。 <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;（2）“**禁用未签署加载项通知(代码将保持禁用状态)**” ：此复选框只有在选中“**要求受信任发行者签署应用程序扩展**”复选框后才可用。在某些情况下，可能未对包含加载项的动态链接库 (.dll) （动态链接库：在运行期间能从 Visual Basic 过程中调用、加载和链接到用户应用程序的子程序集。） 文件进行签名。在这种情况下，将启用由受信任的发布者签名的加载项，并自动禁用未签名的加载项。 <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;（3）“**禁用所有应用程序加载项(可能会影响功能)**” ：如果您不信任任何加载项，请选中此复选框。所有加载项将在不给出任何通知的情况下禁用，并且其他加载项复选框均不可用。<br/>
+ **注释**：仅当您退出 Office 程序并重新启动该程序后，此设置才会生效。
+
+  <<BasicImageViewer src="https://docusaurus-1315095412.cos.ap-beijing.myqcloud.com/image/Docs2FirstCategory/13.png" />
+
+:::
+### 7、ActiveX设置 ###
+
+:::note 设置
+#### 7.1．ActiveX 控件设置介绍 ####
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;下列说明适用于以下文件中的 ActiveX 控件，这些文件不是受信任文档或者所在位置不受信任。<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**重要**: 如果您信任某个文件，并且不希望收到有关包含 ActiveX 控件的内容或其他活动内容的安全警告，请将该文件放在受信任位置。<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;（1）**禁用所有控件，并且不通知**：文档中的所有 ActiveX 控件都被禁用。<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;（2）**以附加限制启用“初始化不安全”(UFI) 控件以及以最少限制启用“初始化安全”(SFI) 控件之前提示我**：根据是否存在 VBA 工程有两种情况：<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;包含 VBA 工程：所有 ActiveX 控件都被禁用，并显示消息栏。单击“启用内容”以启用控件。<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;不包含 VBA 工程：以最小限制启用 SFI ActiveX 控件，不显示消息栏。 但是，ActiveX 控件必须全部标记为 SFI 才不会生成消息栏。 UFI ActiveX 控件都将被禁用。 但是，当用户启用 UFI 控件时，将使用附加限制（如默认值）对其初始化。 属于 UFI 控件的任何持续数据都将丢失。<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;（3）**以最小限制启用所有控件之前提示我：这是默认选项。根据是否存在 VBA 工程，会出现两种情况**：<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;包含 VBA 工程：所有 ActiveX 控件都被禁用，并显示消息栏。 单击“启用内容”以启用控件。<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;不包含 VBA 工程：以最小限制启用 SFI ActiveX 控件，不显示消息栏。 但是，ActiveX 控件必须全部标记为 SFI 才不会生成消息栏。 UFI ActiveX 控件都将被禁用。 但是，当用户启用 UFI 控件时，将使用最小限制（如持久值或持久值不存在时的默认值）<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;（4）**无限制启用所有控件并且不进行提示（不推荐）**：以最小的限制启用文档中的所有 ActiveX 控件。<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;（5）**安全模式**：以安全模式启用 SFI ActiveX 控件，这意味着开发人员已将控件标记为安全。
+<<BasicImageViewer src="https://docusaurus-1315095412.cos.ap-beijing.myqcloud.com/image/Docs2FirstCategory/14.png" />
+
+#### 7.2．在出现消息栏时启用 ActiveX 控件 ####
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;当您打开包含 ActiveX 控件的文件时，会出现带有盾牌图标和“启用内容”按钮的黄色“消息栏”。如果您知道这些控件的来源可靠，请按以下说明操作：在消息栏上单击“启用内容”。（此时将打开文件，并且文件是受信任的文档）<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;下图是 ActiveX 控件位于文件中时显示的消息栏示例。
+<<BasicImageViewer src="https://docusaurus-1315095412.cos.ap-beijing.myqcloud.com/image/Docs2FirstCategory/17.png" />
+
+#### 7.3．什么是 ActiveX 控件？什么是风险？ ####
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ActiveX 控件是小构建基块，用于创建通过 Web 浏览器在 Internet 上工作的应用程序。示例包括用于收集数据、查看特定文件种类以及显示动画的自定义应用程序。 ActiveX 控件的常见用途是命令按钮、列表框和对话框。 Office 程序还允许使用 ActiveX 控件来改进某些文档。
+
+#### 7.4．风险和潜在危害 ####
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ActiveX 控件对计算机具有不受限制的访问权限，因此可以访问本地文件系统以及更改操作系统注册表设置。如果黑客使用 ActiveX 控件来控制您的计算机，则可能带来严重危害。
+
+:::
+
+### 8、宏设置 ###
+::::note 设置
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;我们在使用Excel的过程中，有时Excel会阻止宏的应用，并且在保存时自动删除文件属性的个人信息。我们可以通过Excel中的信任设置，更改相关的设置。<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;我们可以进行如下操作设置对宏的信任：在弹出的“信任中心”对话框中，单击“宏设置”选项，单击选中“启用所有宏”单选按钮，再单击“确定”按钮，如图所示。<br/>
+<<BasicImageViewer src="https://docusaurus-1315095412.cos.ap-beijing.myqcloud.com/image/Docs2FirstCategory/15.png" />
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;（1）**禁用所有宏，并且不通知**：宏及相关安全警报将被禁用。<br/>
+如果你不信任宏，请单击此选项。此时，将禁用文档中的所有宏以及有关宏的安全警告。 如果有些文档包含的未签名宏是你确实信任的，则可以将这些文档放入受信任位置。 受信任位置中的文档无需经过信任中心安全系统的检查便可运行。<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;（2）**禁用所有宏，并发出通知**：宏将被禁用，但如果存在宏，则会显示安全警告。 <br/>
+这是默认设置。如果你希望禁用宏，但又希望存在宏时收到安全警告，请单击此选项。 这样，你就可以选择在各种情况下启用这些宏的时间。<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;（3）**禁用无数字签署的所有宏**：宏处于禁用状态，如果存在未签名的宏，则显示安全警报。<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;除了宏由受信任的发布者进行数字签名的情况，此设置与“禁用所有宏，并发出通知”选项相同，如果你信任发布者，宏就可以运行。如果你不信任该发布者，你就会收到通知。这样，你便可以选择启用那些已签名宏或信任发布者。将禁用所有未签名的宏，并且不发出通知。<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;（4）**启用所有宏 (不建议启用，潜在危险代码可以运行)**：所有宏都会在未确认的情况下运行，单击此选项可允许所有宏运行。
+使用此设置会使你的计算机容易受到潜在恶意代码的攻击，因此不建议使用此设置。<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;（5）**信任对 VBA 工程对象模型的访问**：此设置供开发人员使用，专门用于禁止或允许任何自动化客户端以编程方式访问 VBA 对象模型。换句话说，它为编写用于自动执行 Office 程序以及以编程方式操作 Microsoft Visual Basic for Applications (VBA) 环境和对象模型的代码提供了一种安全选项。此设置因每个用户和应用程序而异，默认情况下拒绝访问。 通过此安全选项，未授权程序很难生成损害最终用户系统的“自我复制”代码。若要使任何自动化客户端能够以编程方式访问 VBA 对象模型，运行该代码的用户必须显式授予访问权。若要启用访问，请选中该复选框。
+::::
+
+### 9、受保护的视图 ###
+:::note  简介
+#### 9.1．什么是受保护的视图？ ####
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;来自 Internet 和其他可能不安全位置的文件可能包含会损害计算机的病毒、蠕虫和其他种类的恶意软件。为了帮助保护计算机，来自这些可能不安全位置的文件会以“只读”方式或在“受保护的视图”中打开。通过使用受保护的视图，可以读取文件、查看其内容并启用编辑，同时降低风险。
+
+#### 9.2．设置介绍 ####
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;（1）**为来自 Internet 的文件启用受保护的视图**：由于 Internet 上存在许多恶意攻击陷阱，因此将其视为不安全的位置。<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;（2）**为位于可能不安全位置的文件启用受保护的视图**：这是指被视为不安全的计算机上的文件夹或网络，例如 Internet 临时文件夹或者您的管理员分配的其他文件夹。<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;（3）**为 Outlook 附件启用受保护的视图**：电子邮件中的附件可能来自不可靠或未知来源。<br/>
+<<BasicImageViewer src="https://docusaurus-1315095412.cos.ap-beijing.myqcloud.com/image/Docs2FirstCategory/16.png" />
+
+#### 9.3．如何退出“受保护的视图”，以便我可以进行编辑、保存或打印？ ####
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;如果必须读取文件而不必对其进行编辑，则可以保持在“受保护的视图”中。如果你知道文件来自可信来源，并且希望编辑、保存或打印该文件，则可以退出“受保护的视图”。退出“受保护的视图”后，会有效移除“只读”状态，该文件将成为受信任文档。<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;（1）退出“受保护的视图”，在出现黄色消息栏时进行编辑：在“消息栏”中，单击“启用编辑”。<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;（2）退出“受保护的视图”，在出现红色消息栏时进行编辑：单击“文件”>“仍然编辑”。<br/>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**警告**: 建议仅在信任文件源和内容时执行此操作。
+
+#### 9.4．“受保护的视图”中的加载项将发生什么变化？ ####
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;在“受保护的视图”中打开文件时，加载项可以运行，但其运行可能不正常。 如果加载项未正确运行，请与加载项的作者联系。可能需要一个与“受保护的视图”兼容的更新版本。
+
+#### 9.5．“受保护的视图”中的云字体将发生什么变化？ ####
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;向你发送文档的用户可能使用了云字体，此类字体不随附于 Windows 或 Microsoft 365，但必须在首次使用时从 Internet 下载。如果是这样，且它是你还未安装的一种字体，则当你处于“受保护的视图”下时不会下载该字体。Word 将尝试用看起来还不错的另一种字体进行替换。如果确信该文档是安全的，且想要以作者原本希望的外观进行查看，需要先启用编辑，以便 Word 下载并安装正确的字体。
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**注意**: 如果 Word 无法找到任何兼容的字体进行替换，则可能会在文本应在的位置显示黑框。启用编辑，以便可以下载正确的字体来解决该问题。
+
+#### 9.6．如何实现将受保护的视图与屏幕阅读器配合使用？ ####
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;当处于受保护的视图中时，编辑将锁定，因此无法按预期在文档周围移动。但是，如果需要使用屏幕阅读器在受保护的视图中浏览文档，可以按 F7 打开插入点浏览。此操作应允许在不处于编辑模式的情况下浏览文本。
+:::
+
+### 10、消息栏 ###
+:::note 简介
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;当Office文件中存在可能不安全的活动内容 (（如宏、ActiveX控件、数据连接) 或敏感信息）时，消息栏会显示安全警报。在这些情况下，会打开带有盾牌之类图标的黄色或红色消息栏，提醒你可能存在某些问题。<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;如果知道该内容来自可靠的来源，则在黄色消息栏中，可以通过单击“启用内容”来使该文件成为受信任的文档，或者只在该会话中启用内容。在红色消息栏中，可以单击警告文本。<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;还可以单击 “文件”选项卡，查看其中的其他信息和选项。<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;下面是一些消息栏示例。
+ <<BasicImageViewer src="https://docusaurus-1315095412.cos.ap-beijing.myqcloud.com/image/Docs2FirstCategory/17.png" />
+ <<BasicImageViewer src="https://docusaurus-1315095412.cos.ap-beijing.myqcloud.com/image/Docs2FirstCategory/18.png" />
+ <<BasicImageViewer src="https://docusaurus-1315095412.cos.ap-beijing.myqcloud.com/image/Docs2FirstCategory/19.png" />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;如果不希望收到安全警告，可以关闭消息栏。<br/>
+
+**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;重要：**我们建议您不要更改信任中心中的安全设置。这样做可能会导致数据丢失，数据被窃取，或者危害到计算机或网络的安全性。
+
+#### 10.1．启用或禁用消息栏上的安全警报 ####
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;单击 “文件 > 选项” > “信任中心”>“信任中心设置”>“消息栏”。<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;（1）**活动内容（如ActiveX控件和宏）被阻止时在所有应用程序中显示消息栏：**这是默认设置。当可能不安全的内容被禁止时显示消息栏。<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**注意**：如果在信任中心的“宏设置”区域中选择“禁用所有宏，并且不通知”，则该选项将处于未选中状态，并且不会显示消息栏。<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;（2）**从不显示有关被阻止内容的信息**：此选项会禁用消息栏，无论信任中心中的安全设置如何，都不会显示任何有关安全问题的警报。<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;注意：在信任中心更改“消息栏”选项不会更改受保护的视图消息栏。<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;（3）**在消息栏中显示策略提示**。除非你的组织要求，否则关闭此功能将禁用所有策略提示：如果文档与组织中的策略冲突，检查此选项会导致消息栏显示策略提示。例如，你的文档中包含敏感信息，如信用卡号或客户账号，可能会显示策略提示。<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**注意**：若要显示策略提示，你的管理员必须创建用于通知你的规则。即使你关闭了此选项，你的组织也可能有用于显示策略提示的策略。通常，你可以隐藏“仅通知”策略提示，但是如果策略要求你采取措施，即使你尚未将选项设置为显示策略提示，也会显示消息栏。<br/>
+<<BasicImageViewer src="https://docusaurus-1315095412.cos.ap-beijing.myqcloud.com/image/Docs2FirstCategory/20.png" />
+:::
+
+### 11、外部内容 ###
+::::note 简介
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;为了帮助保护你的安全和隐私，Microsoft Office 默认配置为阻止工作簿和演示文稿中的外部内容（例如图像、链接媒体、超链接和数据连接）。 阻止外部内容有助于防止 Web 信标和其他侵入性方法，黑客使用这些方法来侵犯你的隐私，并引诱你在未经你了解或同意的情况下运行恶意代码。<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;外部内容是从 Internet 或 Intranet 链接到工作簿或演示文稿的任何内容。 外部内容的一些示例包括图像、链接媒体、数据连接和模板。
+
+#### 11.1．信任中心如何帮助保护我免受外部内容的保护？ ####
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;如果工作簿或演示文稿中存在外部数据连接，则打开文件时，业务栏会通知你已禁用外部内容。如果要取消阻止外部内容，请单击业务栏上的“启用内容”。
+<<BasicImageViewer src="https://docusaurus-1315095412.cos.ap-beijing.myqcloud.com/image/Docs2FirstCategory/21.png" />
+
+#### 11.2．当安全警告询问我是否要启用或禁用外部内容时，我该怎么办？ ####
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;出现安全对话框时，可以选择启用外部内容或阻止它。仅当确定外部内容来自可信源时，才应启用该内容。
+<<BasicImageViewer src="https://docusaurus-1315095412.cos.ap-beijing.myqcloud.com/image/Docs2FirstCategory/22.png" />
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**重要**: 如果确定工作簿或演示文稿中的外部内容值得信任，并且不希望再次收到有关此特定外部内容的通知，而不是将默认信任中心设置更改为不太安全的安全级别，则最好将文件移动到 受信任的位置。 信任位置中的文件可在不受信任中心安全系统检查的情况下运行。
+
+#### 11.3．在信任中心更改 Excel 的外部内容设置 ####
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;外部内容安全设置仅位于 Microsoft Excel 信任中心。不能在信任中心内全局更改 Microsoft PowerPoint 的外部内容设置。<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;如果在组织中工作，系统管理员可能已更改默认设置，这可能会阻止您自行更改任何设置。以下是信任中心中 Excel 的不同外部内容设置。
+
+:::note 11.3.1．更改数据连接的设置
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;（1）**启用所有数据连接（不建议使用）**：如果要打开包含外部数据连接的工作簿并在不收到安全警告的情况下创建与当前工作簿中外部数据的连接，请单击此选项。我们不建议使用此选项，因为与不熟悉的外部数据源的连接可能是有害的，而且当你从任何位置打开任何工作簿时，不会收到任何安全警告。仅当信任外部数据连接的数据源时，才使用此选项。 你可能希望暂时选择此选项，然后在不再需要时返回到默认设置。<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;（2）**提示用户有关数据连接的信息**：此选项是默认选项。如果希望在打开包含外部数据连接的工作簿时以及在当前工作簿中创建外部数据连接时收到安全警告，请单击此选项。 通过安全警告，可以选择为逐个打开的每个工作簿启用或禁用数据连接。<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;（3）**禁用所有数据连接**：如果不希望在当前工作簿中启用任何外部数据连接，请单击此选项。 选择此选项时，打开的任何工作簿中均未连接任何数据连接。 如果在打开工作簿后创建新的外部数据连接，则在再次打开工作簿时不会启用这些数据连接。 这是一个非常严格的设置，可能会导致某些功能无法按预期工作。<br/>
+:::
+
+:::note 11.3.2．更改工作簿链接的设置
+（1）&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**启用所有工作簿链接的自动更新 (不建议使用)**：如果希望在当前工作簿中自动更新指向其他工作簿中数据的链接，而不收到安全警告，请单击此选项。我们不建议使用此选项，因为自动更新指向你不熟悉的工作簿中数据的链接可能是有害的。仅当信任数据链接到的工作簿时，才使用此选项。你可能希望暂时选择此选项，然后在不再需要时返回到默认设置。<br/>
+（2）&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**提示用户工作簿链接的自动更新**：此选项是默认选项。如果希望在当前工作簿中运行自动更新以获取指向另一工作簿中数据的链接时收到安全警告，请单击此选项。<br/>
+（3）&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**禁用工作簿链接的自动更新**：如果不希望自动更新当前工作簿中指向另一工作簿中数据的链接，请单击此选项。<br/>
+:::
+::::
+
+### 12、文件阻止设置 ###
+::::note 设置
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;当我们打开Excel文件时提示被信任中心的文件阻止设置阻止，解决办法如下：<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;（1）单击 “文件 > 选项” > “信任中心”>“信任中心设置”>“文件阻止设置”。<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;（2）在右侧，清除要打开或保存的文件类型的“打开”或“保存”复选框。<br/>
+<<BasicImageViewer src="https://docusaurus-1315095412.cos.ap-beijing.myqcloud.com/image/Docs2FirstCategory/23.png" />
+
+:::danger 备注
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;清除此选项，表示允许用户打开或保存文件，选中该选项表示阻止文件。
+:::
+::::
+
+### 13、隐私选项 ###
+:::note 简介
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;通过允许将个人信息发送给Microsoft以便对 Office进行改进，参与改进 Office 产品工作。<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Microsoft会自动收集计算机上的信息，包括软件生成的错误消息以及生成时间、正在使用的计算机配置类型、计算机运行Microsoft软件时是否遇到困难，以及软硬件是否能够良好响应并快速执行。这些信息通常每天收集一次。<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;此信息不会用于任何形式的广告或销售活动。Microsoft不会与任何公司共享此信息。用户加入该项目时，将随机生成一个标识号。作为唯一标识，该编号仅在用户与 Microsoft共享信息时使用。由于编号是完全随机的，因此无论是Microsoft还是其他人，都无法根据此编号追踪用户信息。<br/>
+<<BasicImageViewer src="https://docusaurus-1315095412.cos.ap-beijing.myqcloud.com/image/Docs2FirstCategory/24.png" />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;当选择“让 Office 连接到 Microsoft 的联机服务以提供与你的使用方式和喜好相关的功能”时，Office 会连接到 Microsoft 提供的联机服务和网站（如必应地图、见解和必应天气）。<br/>
+<<BasicImageViewer src="https://docusaurus-1315095412.cos.ap-beijing.myqcloud.com/image/Docs2FirstCategory/25.png" />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;对于Excel保存时出现“请注意，您的文档的部分内容可能包含了文档检查器无法删除的个人信息”的对话框，我们可以通过以下操作来去除。<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;在弹出的“信任中心”对话框中，单击“隐私选项”选项，取消“保存时从文件属性中删除个人信息”复选框的选中，单击“确定”按钮，如图所示。<br/>
+<<BasicImageViewer src="https://docusaurus-1315095412.cos.ap-beijing.myqcloud.com/image/Docs2FirstCategory/26.png" />
+:::
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+

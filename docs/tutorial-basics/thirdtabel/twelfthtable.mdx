@@ -1,0 +1,28 @@
+# 硬件设置
+:::note 方法如下
+1、**启用CPU的二级缓存（需重启）**<br/>
+位置：
+HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management<br/>
+值项：secondleveldatacache<br/>
+修改：可根据需要进行修改。 <br/>
+
+2、**修改认证标识（拥有个性化的CPU）**<br/>
+位置：HKEY_LOCAL_MACHINE\HARDWARE\DEscriptION\System\CentralProcessor\0<br/>
+值项：ProcessorNameString<br/>
+修改：可根据需要进行修改，可以改成8CPU,9.99GHZ主频<br/>
+
+3、**更改系统属性对话框里的CPU信息**<br/>
+位置：HKEY_LOCAL_MACHINE\HARDWARE\DEscriptION\System\CentralProcessor\0<br/>
+值项：VendorIdentifer<br/>
+修改：可根据需要进行修改。<br/>
+
+4、**清除内存中不使用的DLL文件（需重启）**<br/>
+位置：HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer<br/>
+新建值项：Always UnloadDll<br/>
+(REG-DWORD)值：1<br/>
+
+5、**启动自动优化磁盘功能（需重启）**<br/>
+位置：HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Dfrg\BootOptimizeFunction<br/>
+值项：Enable<br/>
+修改：Yes<br/>
+:::

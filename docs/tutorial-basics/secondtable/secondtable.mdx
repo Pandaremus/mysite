@@ -1,0 +1,90 @@
+import BasicImageViewer from '../../../src/components/zujian/index.js'
+
+
+
+# .NET 组件库
+
+
+:::note 定义
+ .NET 是一个免费的跨平台 开源开发人员平台 ，用于构建多种应用程序。 .NET基于许多大规模应用在生产中使用的高性能运行时。
+
+ .NET SDK 是一组库和工具，开发人员可用其创建 .NET 应用程序和库。 它包含以下用于构建和运行应用程序的组件：.NET CLI、.NET 运行时和库、dotnetdotnet。
+:::
+
+
+:::note 安装 .NET SDK
+ 与任何工具一样，首先应将工具安装到计算机上。 根据场景，可以使用以下某个方法安装 
+
+ SDK：使用本机安装程序。使用安装 shell 脚本。
+ 本机安装程序主要用于开发人员的计算机。 SDK 通过每个受支持平台的本机安装机制进行分发，例如 Ubuntu 上的 DEB 包或 Windows 上的 MSI 程序包。 这些安装程序将根据需要为用户安装并设置环境，以便在安装完成后可立即使用 SDK。 但是，这些安装程序也需要对计算机的管理权限。 可以在 .NET 下载页面上找到要安装的 SDK。
+
+ 另一方面，安装脚本不需要使用管理权限。 但是，它们也不会在计算机上安装任何系统必备组件；需要手动安装所有系统必备组件。 这些脚本主要用于设置生成服务器或希望安装工具但没有管理权限的情况（请务必注意上述系统必备组件注意事项）。 可以在安装脚本引用一文中找到详细信息。 如果对如何在 CI 生成服务器上设置 SDK 感兴趣，请参阅在持续集成 (CI) 环境中使用 .NET SDK。
+
+ 默认情况下，SDK 以“并排”(SxS) 方式安装，这意味着多个版本可以随时在一台计算机上共存。 有关如何在运行 CLI 命令时选取版本的信息，请参阅选择要使用的 .NET 版本。
+:::
+
+:::note 查看版本
+ **可使用终端查看当前安装的 .NET SDK 版本。** 打开终端并运行以下命令
+    
+    dotnet --list-sdks
+
+ 将获得类似于下面的输出。
+
+ 3.1.424 [C:\program files\dotnet\sdk]<br/>
+ 5.0.100 [C:\program files\dotnet\sdk]<br/>
+ 6.0.402 [C:\program files\dotnet\sdk]<br/>
+ 7.0.100 [C:\program files\dotnet\sdk]<br/>
+
+**可使用以下命令查看当前安装的 .NET 运行时版本。** 打开终端并运行以下命令
+
+    dotnet --list-runtimes
+
+ 将获得类似于下面的输出。<br/>
+
+ Microsoft.AspNetCore.App 3.1.30 [C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App] <br/>
+ Microsoft.AspNetCore.App 6.0.10 [C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App] <br/>
+ Microsoft.AspNetCore.App 7.0.0 [C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App] <br/>
+ Microsoft.NETCore.App 3.1.30 [C:\Program Files\dotnet\shared\Microsoft.NETCore.App] <br/>
+ Microsoft.NETCore.App 5.0.17 [C:\Program Files\dotnet\shared\Microsoft.NETCore.App] <br/>
+ Microsoft.NETCore.App 6.0.10 [C:\Program Files\dotnet\shared\Microsoft.NETCore.App] <br/>
+ Microsoft.NETCore.App 7.0.0 [C:\Program Files\dotnet\shared\Microsoft.NETCore.App] <br/>
+ Microsoft.WindowsDesktop.App 3.1.30 [C:\Program Files\dotnet\shared\Microsoft.WindowsDesktop.App] <br/>
+ Microsoft.WindowsDesktop.App 6.0.10 [C:\Program Files\dotnet\shared\Microsoft.WindowsDesktop.App] <br/>
+ Microsoft.WindowsDesktop.App 7.0.0 [C:\Program Files\dotnet\shared\Microsoft.WindowsDesktop.App] <br/>
+:::
+
+
+:::note 检查安装文件夹
+ 可以安装 .NET，但不能将其添加到操作系统或用户配置文件的 PATH 变量。 在这种情况下，前面几节中的命令可能不起作用。 作为替代方法，可以检查 .NET 安装文件夹是否存在。
+
+ 从安装程序或脚本安装 .NET 时，会将其安装到标准文件夹中。 大多数时候，安装 .NET 时使用的安装程序或脚本会让你选择安装到另一个文件夹。 如果选择安装到其他文件夹，请调整文件夹路径的开头。
+:::
+ 
+:::note 开机自启动服务设置
+ 打开计算机管理—服务和应用程序，设置启动类型 <br/>
+
+<BasicImageViewer src="https://docusaurus-1315095412.cos.ap-beijing.myqcloud.com/image/DocsSecondSort/1.png" />
+
+ 找到需要设置的服务右击鼠标设置属性为自动后确定
+<BasicImageViewer src="https://docusaurus-1315095412.cos.ap-beijing.myqcloud.com/image/DocsSecondSort/1.png" />
+
+ 1、自动：指电脑启动时同时加载该服务项，以便支持其他在此服务基础上运行的程序。 <br/>
+ 2、自动(延时启动)：则是Win 7当中非常人性化的一个设计。采用这种方式启动，可以在系统启动一段时间后延迟启动该服务 项，可以很好地解决一些低配置电脑因为加载服务项过多导致电脑启动缓慢或启动后响应慢的问题。
+
+:::
+
+
+:::note 用户权限设置
+ 右击需要设置的应用设置属性。更改使用者权限单机编辑。将使用者权限调整为完全控制，将有超级管理员权限
+ <BasicImageViewer src="https://docusaurus-1315095412.cos.ap-beijing.myqcloud.com/image/DocsSecondSort/3.png" />
+:::
+
+
+:::danger 注意 
+ 一般情况下，**在windows10(不包括windows10)之下的操作系统安装ACE审计软件时需要额外安装 .NET 组件，[点击此处下载 .NET 组件库](ispackage/NDP462.exe)**
+:::
+
+
+
+
+

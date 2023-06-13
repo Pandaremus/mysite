@@ -1,0 +1,17 @@
+import BasicImageViewer from '../../../src/components/zujian/index.js'
+
+# 注册表恢复
+
+:::note 恢复操作
+ 1、重新启动系统恢复注册表
+ 重启就可以修正各种在注册表中出现的错误，但是以硬盘上的注册表的信息正确为前提。<br/>
+ 2、注册表导入恢复
+ 找到之前备份的文件，然后运行regedit.exe文件，文件的导入，选择要导入的注册表文件，点找开即可。<br/>
+ <BasicImageViewer src="https://docusaurus-1315095412.cos.ap-beijing.myqcloud.com/image/DocsThirdCategory/19.png" />
+ 3、利用高级启动选项恢复注册表<br/>
+ 重启计算机，启动时按F8键进入高级选项菜单，选择最后一次正确的配置，回车。<br/>
+ 4、通过局域网来恢复注册表<br/>
+ 一般是指连入局域网的某一计算机（假设为A）的注册表被管理员锁了，但是有另一台计算机（假设为B）的注册表可以用，那么现在就可以用B来解除A的锁定。<br/>
+  首先进入B的注册表，点击【文件】——【连接网络注册表】，在【查找】位置输入A，此时注册表中出现，修改键值：A\HEKY_USERS\S-1-5-21-823518204-688789844-842925246-500\Software\Microsoft\Windows\CurrentVersion\Policies\System\System下的disable registry tools的值为0即可。
+ “S-1-5-21-823518204-688789844-842925246-500”这一串数字表示【超级管理员】，重新安装系统。<br/>
+:::

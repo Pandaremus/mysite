@@ -1,0 +1,42 @@
+import BasicImageViewer from '../../../src/components/zujian/index.js'
+
+# 注册表基础
+
+:::note 注册表概念
+ 注册表是windows操作系统、硬件设备以及客户应用程序得以正常运行和保存设置的核心“数据库”，也可以说是一个非常巨大的树状分层结构的数据库系统。<br/>
+
+ 注册表记录了用户安装在计算机上的软件和每个程序的相互关联信息，它包括了计算机的硬件配置，包括自动配置的即插即用的设备和已有的各种设备说明、状态属性以及各种状态信息和数据。利用一个功能强大的注册表数据库来统一集中地管理系统硬件 设施、软件配置等信息，从而方便了管理，增强了系统的稳定性。
+:::
+
+:::note 注册表功能
+ 注册表记录了用户安装在计算机上的软件和每个程序的相关信息，通过它可以控制硬件、软件、用户环境和操作系统界面的数据信息文件。<br/>
+
+ 相关知识：注册表文件的数据信息保存在system.dat和user.dat中，利用好regedit.exe程序能够存取注册表文件。
+:::
+
+:::note 编辑器说明
+ 点击【Win+R】键，打开运行界面，在运行里键入regedit就可以进入了。
+
+ <BasicImageViewer src="https://docusaurus-1315095412.cos.ap-beijing.myqcloud.com/image/DocsThirdCategory/1.png" />
+ 进入之后，出现如下界面：
+ <BasicImageViewer src="https://docusaurus-1315095412.cos.ap-beijing.myqcloud.com/image/DocsThirdCategory/2.png" />
+
+ 根键:称为HKEY……,某一项的句柄项：附加的文件夹和一个或多个值
+
+ <BasicImageViewer src="https://docusaurus-1315095412.cos.ap-beijing.myqcloud.com/image/DocsThirdCategory/3.png" />
+
+ 子项：在某一个项（父项）下面出现的项（子项）。父项即为根键
+
+ <BasicImageViewer src="https://docusaurus-1315095412.cos.ap-beijing.myqcloud.com/image/DocsThirdCategory/4.png" />
+
+ 值项：带有一个名称和一个值的有序值，每个项都可包括任何数量的值项，
+ 值项由三个部分组成：名称、数据类型和数据。
+
+ <BasicImageViewer src="https://docusaurus-1315095412.cos.ap-beijing.myqcloud.com/image/DocsThirdCategory/5.png" />
+
+ 1、名称：不包括反斜线的字符、数字、代表符和空格的任意组合。同一键中不可有相同的名称。<br/>
+ 2、数据类型：包括字符串、二进制和双字节等。<br/>
+ 3、数据：值项的具体值，它的大小可以占用64KB。<br/>
+
+
+:::

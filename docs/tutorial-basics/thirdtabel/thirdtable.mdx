@@ -1,0 +1,81 @@
+import BasicImageViewer from '../../../src/components/zujian/index.js'
+
+# 根键相关内容 
+
+## HKEY_CLASSES_ROOT
+
+:::note HKEY_CLASSES_ROOT
+
+ 我们知道，在这一个根键中记录的是WINDOWS操作系统中所有数据文件的信息内容，主要记录了不同文件的文件扩展名和与之对应的应用程序。这就是为什么我们双击某一个文档的时候，可以由系统自动调出应用程序的所在了。
+ 这个根键的子键当大家展开时发现是非常多的，它主要分两种：
+ 一是已经注册的各类文件的扩展名；一是各种文件类型的有关信息。
+  <BasicImageViewer src="https://docusaurus-1315095412.cos.ap-beijing.myqcloud.com/image/DocsThirdCategory/6.png" />
+:::
+
+## HKEY_CURRENT_USER
+
+:::note HKEY_CURRENT_USER
+
+ 此根键中保存的信息（当前用户的子项信息）与HKEY_USERS_DEFAULT下面的一模一样的。任何对HKEY_CURRENT_USER根键中的信息的修改都会导致对HKEY_USERS_DEFAULT中子项的修改。
+  <BasicImageViewer src="https://docusaurus-1315095412.cos.ap-beijing.myqcloud.com/image/DocsThirdCategory/7.png" />
+
+  <BasicImageViewer src="https://docusaurus-1315095412.cos.ap-beijing.myqcloud.com/image/DocsThirdCategory/8.png" />
+:::
+
+## HKEY_LOCAL_MACHINE
+
+:::note HKEY_LOCAL_MACHINE
+
+ 此根键中存放的是用来控制系统和软件的设置，由于这些设置是针对那些使用Windows系统的用户而设置的，是一个公共配置信息，所以它与具体的用户没有多大关系。
+
+ 1、**HARDWARE** 子项：该子项包括了系统使用的浮点处理器、串口等信息：<br/>
+ ->	ACPI: 存放高级电源管理接口数据；<br/>
+ ->	DESCRIPTION：存放有关系统信息；<br/>
+ ->	DEVICEMAP：用于存放设备映射；<br/>
+ ->	RESOURCEMAP：用于存放资源列表。<br/>
+ <BasicImageViewer src="https://docusaurus-1315095412.cos.ap-beijing.myqcloud.com/image/DocsThirdCategory/9.png" />
+
+
+ 2、**SAM** 子项：这部分受保护，无法看到。<br/>
+
+ 3、**SECURITY** 子项：该子项只是为将来的高级功能而预留的。<br/>
+
+ 4、**SOFTWARE** 子项：该子项中保留的是所有已安装的32位应用程序的信息，各个程序的控制信息分别安装在相应的子项中，由于不同的计算机安装的应用程序互不相同，因此这个子项下面的子项信息也不完全一样。<br/>
+
+ 5、**SYSTEM** 子项：该子项是启动时所需的信息和修复系统时所需要的信息：<br/>
+ ->	Current Control:保存了当前驱动程序控制集中的所有信息。
+ <BasicImageViewer src="https://docusaurus-1315095412.cos.ap-beijing.myqcloud.com/image/DocsThirdCategory/10.png" />
+
+:::
+
+## HKEY_USERS
+
+:::note HKEY_USERS
+
+ 此根键中保存的是默认用户（default）,当前登录用户和软件（software）的信息，其中DEFAULT子项是其中最重要的，它的配置是针对未来将会被创建的新用户的。新用户根据默认用户的设置信息来生成自己的配置文件，该配置文件包括环境、屏幕和声音等多种信息，其中常用的3项有：<br/>
+
+ -> 1、 **Control Panel** 子项：它包括内容与桌面、光标、键盘和鼠标等设置有关
+ <BasicImageViewer src="https://docusaurus-1315095412.cos.ap-beijing.myqcloud.com/image/DocsThirdCategory/11.png" />
+
+ -> 2、 **Keyboard layout** 子项：用于键盘的布局（如语言的加载顺序等）<br/>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;【Preload】:语言的加载顺序<br/>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;【Substitutes】:设置可替换的键盘语言布局<br/>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;【Toggle】:用于选择键盘语言<br/>
+<BasicImageViewer src="https://docusaurus-1315095412.cos.ap-beijing.myqcloud.com/image/DocsThirdCategory/12.png" />
+
+ -> 3、 **App Events** 子项：它包括了各种应用事件的列表。<br/>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;【Event Labels】:按字母顺序列表；<br/>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;【Schemes】:按事件分类列表<br/>
+ <BasicImageViewer src="https://docusaurus-1315095412.cos.ap-beijing.myqcloud.com/image/DocsThirdCategory/13.png" />
+ <BasicImageViewer src="https://docusaurus-1315095412.cos.ap-beijing.myqcloud.com/image/DocsThirdCategory/14.png" />
+
+:::
+
+## HKEY_CURRENT_CONFIG
+
+:::note HKEY_CURRENT_CONFIG
+ 此根键存放的是计算机当前会话中的所有硬件配置信息，其所包含的两个子项也是HKEY_LOCAL_MACHINE中的两个关键项。包括：<br/>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**SOFTWARE** 子项：保存着与这台电脑中安装的应用程序相关的设置。<br/>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**SYSTEM** 子项：WINDOWS所装载的设备驱动程序以及当WINDOWS启动时所需要的各种参数。<br/>
+ <BasicImageViewer src="https://docusaurus-1315095412.cos.ap-beijing.myqcloud.com/image/DocsThirdCategory/15.png" />
+:::

@@ -1,0 +1,27 @@
+import BasicImageViewer from '../../../src/components/zujian/index.js'
+
+# 注册表的优化
+
+## 一、优化注册表的原因
+:::danger 原因
+ 1、在计算机使用过程中可能经常添加或删除应用程序；在上网时遇到恶意网站，向注册表强行添加信息。<br/>
+ 2、原来的应用程序卸载之后注册表没删除，启动时出现没找到某某应用程序。<br/>
+ 3、多余注册表的子项可能会造成浪费或降低启动速度
+:::
+
+## 二、手工优化注册表
+
+:::note 优化方法
+  1、清除多余的DLL文件<br/>
+ 大家找到这个项：<br/>
+ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\ShareDLLs，在这个项下存放的是共享的DLL信息，注意看括号里面的数据，它表示共享文件的数目，如果为0，则进行删除。
+ <BasicImageViewer src="https://docusaurus-1315095412.cos.ap-beijing.myqcloud.com/image/DocsThirdCategory/20.png" />
+ 2、安装卸载应用程序的垃圾信息<br/>
+ 主要是由于一些非法卸载应用程序导致的，我们首先要知道什么程序被非法卸载了，除了正在使用的，其余没用的都可删除。
+ 注册表位置：HKEY_CURRENT_USER\Software 、HKEY_LOCAL_MACHINE\Software中看到没用的删除即可。<br/>
+ 3、系统安装时产生的无用信息：去掉，可能使启动变快1<br/>
+
+:::
+
+ 
+

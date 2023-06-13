@@ -1,0 +1,176 @@
+# 系统设置
+
+:::note 控制面板常用的选项设置，系统性能优化设置
+1、**禁用“控制面板”中的“显示”选项**<br/>
+位置：HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies<br/>
+新建项值：System<br/>
+新建值项：NodispCPL<br/>
+（REG_DWORD）值：1<br/>
+
+2、**屏蔽显示选项中的“屏幕保护程序”**<br/>
+位置：HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies\System<br/>
+新建值项：NoDispScrSavPage<br/>
+        （REG_DWORD）值：1<br/>
+
+3、**屏蔽显示选项中的“外观”**<br/>
+位置：HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies\System<br/>
+新建值项：NoDispAppearancePage<br/>
+        （REG_DWORD）值：1<br/>
+
+4、**屏蔽显示选项中的“设置”**<br/>
+位置：HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies\System<br/>
+新建值项：NoDispSettingsPage<br/>
+         （REG_DWORD）值：1<br/>
+
+5、**屏蔽显示选项中的“屏幕保护程序密码”**<br/>
+位置：HKEY_CURRENT_USER\Software\Policies\Microsoft<br/>
+新建项：Control Panel<br/>
+再新建子项：Desktop<br/>
+新建值：ScreenSaverIsSecure<br/>
+ (REG_DWORD)值：1<br/>
+
+6、**禁止使用“添加删除程序”项**<br/>
+位置：HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies<br/>
+新建子项：Uninstall<br/>
+新建值项：NoAddRemovePrograms<br/>
+ (REG_DWORD)值：1<br/>
+
+7、**屏蔽“添加删除程序”中的“更改或删除程序”选项**<br/>
+位置：HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies\uninstall<br/>
+新建值项：NoRemovePage <br/>
+ (REG_DWORD)值：1<br/>
+
+8、**屏蔽“添加删除程序”中的“添加新程序”选项**<br/>
+位置：HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies\uninstall<br/>
+新建值项：NoAddpage <br/>
+(REG_DWORD)值：1<br/>
+
+9、**屏蔽“添加删除程序”中的“添加或删除windows组件”选项**<br/>
+位置：HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies\uninstall<br/>
+新建值项：NoWindowsSetupPage<br/>
+ (REG_DWORD)值：1<br/>
+
+10、**屏蔽“添加删除程序”中的“更改或删除程序”中的“单击此处获得支持信息”选项**<br/>
+位置：HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies\uninstall<br/>
+新建值项：NoSupportInfo <br/>
+(REG_DWORD)值：1<br/>
+
+11、**屏蔽“更改或删除程序”中的“添加新程序”中的“从CD-ROM或软盘安装程序”选项**<br/>
+位置：HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies\uninstall<br/>
+新建值项：NoAddFromCDorFloppy<br/>
+ (REG_DWORD)值：1<br/>
+
+12、**屏蔽“更改或删除程序”中的“添加新程序”中的“从Microsoft添加程序程序”选项**<br/>
+位置：HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies\uninstall<br/>
+新建值项：NoAddFromInternet<br/>
+ (REG_DWORD)值：1<br/>
+
+13、**设置windows的关机时间**<br/>
+位置：HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control<br/>
+值项：WaitToKillServiceTimeout<br/>
+修改：它以毫秒为单位，请自行设置<br/>
+
+14、**更改windows服务启动的顺序**<br/>
+位置：HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\ServiceGroupOrder<br/>
+值项：ServiceGroupOrder<br/>
+修改：根据自身需要的顺序自行输入<br/>
+
+15、**更改windows启动时运行的程序**<br/>
+位置：HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SessionManager<br/>
+值项：BootExecite<br/>
+修改：自行输入一行启动时要执行的命令即可<br/>
+
+16、**删除多余的DLL文件**<br/>
+位置：HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\SharedDlls<br/>
+值项：这里许多DLL的文件，所有是0的都是没用的，删除即可，然后再将相应的系统文件夹中的文件删除。<br/>
+
+17、**删除不必要的自启程序**<br/>
+位置：HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Run<br/>
+值项：这里面列出的都是启动项，不需要的可以删掉，他和msconig中列出的是一样的<br/>。
+
+18、**清除注册表垃圾（需重启）**<br/>
+位置1：HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall<br/>
+位置2：HKEY_LOCAL_MACHINE\SOFTWARE<br/>
+操作：不需要的可以进行删除。 <br/>
+
+19、**自动刷新窗口（需重启）**<br/>
+位置：HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Update<br/>
+键值：UpdateMode<br/>
+修改：0<br/>
+
+20、**更改开始菜单存放的目录（需重启）**<br/>
+位置：HKEY_USERS\.DEFAULT\Software\Microsoft\Windows\CurrentVersion\Explorer\Shell Folders<br/>
+键值：Start Menu<br/>
+修改：把要改到的路径添上就可以了,并将原源件复制到目标文件夹下<br/>
+
+21、**更改开始菜单中的程序的存放目录（需重启）**<br/>
+位置：HKEY_USERS\.DEFAULT\Software\Microsoft\Windows\CurrentVersion\Explorer\Shell Folders<br/>
+键值：Program<br/>
+修改：把要改到的路径添上就可以了，并将原源件复制到目标文件夹下<br/>
+
+22、**更改开始菜单中的程序里的应用程序存放目录（需重启）**<br/>
+位置：HKEY_USERS\.DEFAULT\Software\Microsoft\Windows\CurrentVersion\Explorer\Shell Folders<br/>
+键值：appdate<br/>
+修改：把要改到的路径添上就可以了，并将原源件复制到目标文件夹下<br/>
+
+23、**更改开始菜单中的程序里的发送到存放目录（需重启）**<br/>
+位置：HKEY_USERS\.DEFAULT\Software\Microsoft\Windows\CurrentVersion\Explorer\Shell Folders<br/>
+键值：SendTo<br/>
+修改：把要改到的路径添上就可以了，并将原源件复制到目标文件夹下,其实我们也可以在这里建立一个新的发送到项目，比如发送到你的U盘<br/>
+
+24、**更改开始菜单中的程序里的启动程序存放目录（需重启）**<br/>
+位置：HKEY_USERS\.DEFAULT\Software\Microsoft\Windows\CurrentVersion\Explorer\Shell Folders
+键值：StartUp<br/>
+修改：把要改到的路径添上就可以了，并将原源件复制到目标文件夹下<br/>
+
+25、**更改网页历史记录存放目录（需重启）**<br/>
+位置：HKEY_USERS\.DEFAULT\Software\Microsoft\Windows\CurrentVersion\Explorer\Shell Folders
+键值：History<br/>
+修改：把要改到的路径添上就可以了，并将原源件复制到目标文件夹下<br/>
+
+26、**更改我的文档存放目录（需重启）**<br/>
+位置：HKEY_USERS\.DEFAULT\Software\Microsoft\Windows\CurrentVersion\Explorer\Shell Folders<br/>
+键值：Personal<br/>
+修改：把要改到的路径添上就可以了，并将原源件复制到目标文件夹下<br/>
+
+27、**更改新建文件的存放目录（需重启）**<br/>
+位置：HKEY_USERS\.DEFAULT\Software\Microsoft\Windows\CurrentVersion\Explorer\Shell Folders<br/>
+键值：Templates<br/>
+修改：把要改到的路径添上就可以了<br/>
+
+28、**在我的电脑中显示网络连接**<br/>
+位置：HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\MyComputer\NameSpace<br/>
+新建子项：{992CFFA0-F557-101A-88EC-00DD010CCC48}<br/>
+修改默认值：网络连接<br/>
+
+29、**在我的电脑中显示打印机和传真**<br/>
+位置：HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\MyComputer\NameSpace<br/>
+新建子项：{2227A280-3AEA-1069-A2DE-08002B3039D}<br/>
+修改默认值：打印机和传真<br/>
+
+30、**打开或关闭启动优化功能（启动时碎片整理）**<br/>
+位置：HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Dfrg\BootOptimizeFunction<br/>
+键值：Enable<br/>
+修改：Y开启N不开启<br/>
+
+31、**加快程序运行速度(需要重启)**<br/>
+位置：HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\FileSystem<br/>
+新建值项：configfileallocsize<br/>
+值：1f4<br/>
+
+32、**缩短关闭无响应程序的等待时间（需重启）**<br/>
+位置：HKEY_USERS\.DEFAULT\Control Panel\Desktop<br/>
+值项：WaitToKillTimeout<br/>
+修改：增大一点可以加快处理程序的速度<br/>
+
+33、**关机时自动删除交换文件**<br/>
+位置：HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Control\Session Manager\Memory Management<br/>
+值：ClearPageFileAtShutdown<br/>
+修改：1<br/>
+
+34、**自动关闭计算机（指关机后停在关机界面）**<br/>
+位置：HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows<br/>
+NT\CurrentVersion\Winlogon<br/>
+值：PowerdownAfterShutdown<br/>
+修改：1<br/>
+:::
